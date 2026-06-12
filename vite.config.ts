@@ -5,6 +5,7 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+  console.log("GEMINI_API_KEY exists:", !!env.GEMINI_API_KEY);
   return {
     plugins: [react(), tailwindcss()],
     define: {
